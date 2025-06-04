@@ -1,0 +1,178 @@
+/* Umumiy stil */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f0f4ff, #ffffff);
+  }
+  
+  /* Kirish qismi */
+  .intro {
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+  }
+  
+  .intro.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .devel {
+    font-size: 28px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #0077b5, #00bcd4);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fadeInText 1s ease-in-out forwards;
+  }
+  
+  
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+      letter-spacing: 2px;
+    }
+    to {
+      opacity: 1;
+      letter-spacing: normal;
+    }
+  }
+  
+  /* Ijtimoiy tarmoqlar */
+  .social-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 15px;
+    color: #333;
+    transition: transform 0.3s ease;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 30px;
+  }
+  
+  .social-links a:hover {
+    color: #0077b5;
+    transform: scale(1.05);
+    background-color: #333;
+  }
+  
+  .icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links a:hover .icon {
+    transform: rotate(10deg);
+  }
+  
+  /* Rasm galereyasi */
+  .photo-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+  }
+  
+  .photo-gallery.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .main-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #00bcd4;
+    box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3);
+    transition: transform 0.5s ease;
+  }
+  
+  .main-photo:hover {
+    transform: scale(1.05);
+  }
+  
+  .thumbnail-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .thumbnail:hover {
+    border-color: #00bcd4;
+    transform: scale(1.1);
+  }
+  
+  .thumbnail.active {
+    border-color: #0077b5;
+  }
+  
+  /* Mobil versiyasi */
+  @media (max-width: 768px) {
+    .home {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .devel {
+      font-size: 22px;
+    }
+  
+    .main-photo {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .thumbnail {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .devel {
+      font-size: 18px;
+    }
+  
+    .social-links a h3 {
+      font-size: 16px;
+    }
+  
+    .main-photo {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .thumbnail {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  

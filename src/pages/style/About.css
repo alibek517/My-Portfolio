@@ -1,0 +1,59 @@
+.about {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .about-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #0077b5, #00bcd4);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .about-subtitle {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #0077b5;
+  }
+  
+  .about-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .skills-list {
+    list-style-type: square;
+    margin-left: 20px;
+    color: #555;
+  }
+  
+  .skills-list li {
+    margin-bottom: 8px;
+  }
+  
+  /* Animatsiya */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsiv uchun */
+  @media (max-width: 480px) {
+    .about-title {
+      font-size: 28px;
+    }
+    .about-subtitle {
+      font-size: 22px;
+    }
+    .about-text {
+      font-size: 16px;
+    }
+  }
+  

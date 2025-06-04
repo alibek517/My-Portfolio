@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #0077b5, #00bcd4);
+    color: white;
+    animation: slideDown 1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header h1, .header h2 {
+    margin: 0;
+  }
+  
+  /* Animatsiya */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsiv qilish */
+  @media (max-width: 480px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  section {
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+  }
+  section:hover {
+    transform: translateY(-5px);
+  }
+  option {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  option:hover {
+    background: #e0f7fa;
+  }
+  
