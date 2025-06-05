@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
-import './style/Minhed.css'; // styling uchun
+import './style/HedrNew.css'; // styling uchun
 
 function Minhed() {
   return (
